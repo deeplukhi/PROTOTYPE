@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bail Reckoner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="user">
+        <div class="navbar">
+            <div class="navbar-left">
+                <h1>Bail Reckoner</h1>
+            </div>
+            <div class="navbar-right">
+                <i class="fa-solid fa-phone"></i>
+                <a href="#">Call Us</a>
+                <div class="separator"></div>
+                <div class="dropdown">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <a href="#">English</a>
+                    <div class="dropdown-content">
+                        <a href="#">English</a>
+                        <a href="#">Gujarati</a>
+                        <a href="#">Hindi</a>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <button class="login-button">Login</button>
+                <button class="register-button">Register</button>
+            </div>
+        </div>
+
+        <div class="main-container">
+
+            <!-- Left Section: Video and Description -->
+            <div class="left-section">
+                <div class="video-section">
+                    <iframe src="https://www.youtube.com/embed/Z-fD8lP9w4s" allowfullscreen></iframe>
+                </div>
+                <div class="description-section">
+                    <h2>Welcome to the Bail Reckoner App!</h2>
+                    <p>Our app helps users predict bail eligibility based on various IPC sections and crime details.
+                        Here’s
+                        a simple guide to help you navigate the app:</p>
+
+                    <h3>Step 1: Watch the Tutorial (Optional)</h3>
+                    <p>On the left side of the page, there is a video tutorial that explains how to use the app. If you
+                        need
+                        assistance, feel free to watch it.</p>
+
+                    <h3>Step 2: Fill Out the Bail Form</h3>
+                    <p>On the right side, you’ll find the bail form. Follow these steps to complete it:</p>
+                    <ul>
+                        <li><strong>Select Crime/IPC Section:</strong> Choose the relevant crime or IPC code (e.g., IPC
+                            302
+                            for Murder) from the dropdown menu.</li>
+                        <li><strong>Enter Area and Pincode:</strong> Provide the area/zone and pincode where the crime
+                            occurred.</li>
+                        <li><strong>Enter Personal Information:</strong> Add your caste (if required), age, and select
+                            your
+                            gender (Male, Female, or Other).</li>
+                        <li><strong>Optional: Past Crime Information:</strong> If applicable, input details about any
+                            past
+                            crimes, such as IPC code, area, bail status, and imprisonment duration.</li>
+                    </ul>
+
+                    <h3>Step 3: Check Your Bail</h3>
+                    <p>Once the form is completed, click on the "Check Bail" button to get your bail prediction.</p>
+
+                    <h3>Step 4: Review Your Bail Prediction Results</h3>
+                    <p>Your results will include the following details:</p>
+                    <ul>
+                        <li><strong>Bail Amount:</strong> The predicted bail amount you may need to pay (e.g., ₹50,000).
+                        </li>
+                        <li><strong>Bail Duration:</strong> The expected duration of your bail.</li>
+                        <li><strong>Bail Score:</strong> A score indicating the likelihood of being granted bail based
+                            on
+                            the information provided.</li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+            <!-- Right Section: Main Body -->
+            <div class="right-section">
+                <div class="form-container">
+                    <label for="crimeCode" class="label">Crime/Indian Penal Code</label>
+                    <select id="crimeCode" name="crimeCode" class="select">
+                        <option value="">Select IPC</option>
+                        <option value="302">302 - Murder</option>
+                        <option value="376">376 - Rape</option>
+                        <option value="420">420 - Cheating</option>
+                    </select>
+                    <hr>
+                    <div class="form-row">
+                        <div>
+                            <h4>Area / Zone</h4>
+                            <input type="text" name="state" placeholder="Enter your area/Zone">
+                        </div>
+                        <div>
+                            <h4>Pincode</h4>
+                            <input type="text" placeholder="Enter your pincode">
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="form-row">
+                        <div>
+                            <h4>Caste</h4>
+                            <input type="text" placeholder="Enter your caste">
+                        </div>
+                        <div>
+                            <h4>Age</h4>
+                            <input type="text" placeholder="Enter your age">
+                        </div>
+                    </div>
+                    <div class="gender-select">
+                        <h4>Gender</h4>
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                    </div>
+
+                    <hr>
+
+                    <h4>Past Crime (Optional)</h4>
+                    <div class="disclaimer">
+                        * Providing past crime information will help improve the accuracy of bail eligibility.
+                    </div>
+
+                    <table class="crime-table">
+                        <thead>
+                            <tr>
+                                <th>IPC</th>
+                                <th>Area / Zone</th>
+                                <th>Was Bail Given Last Time?</th>
+                                <th>Duration of Prisoner (in months)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" placeholder="Enter IPC code"></td>
+                                <td><input type="text" placeholder="Enter Area/Zone"></td>
+                                <td class="radio-buttons">
+                                    <label><input type="radio" name="bail_last_time" value="yes"> Yes</label>
+                                    <label><input type="radio" name="bail_last_time" value="no"> No</label>
+                                </td>
+                                <td><input type="text" placeholder="Duration (months)"></td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                    <div class="form-group"></div>
+                    <button type="button" class="button">Check Bail 🧮</button>
+                    <div class="disclaimer-final">
+
+                        <h4>Disclaimer</h4>
+                        The Bail Reckoner app utilizes an AI-based prediction model to generate bail scores based on
+                        various
+                        IPC sections
+                        and crime details. Please note that while we strive for accuracy, the predictions provided may
+                        not
+                        always be 100%
+                        precise and should not be considered as definitive legal advice. Users are advised to consult
+                        legal
+                        professionals
+                        for final decisions.
+                        <br><br>
+                        Additionally, we prioritize your privacy and security. Any information you provide is collected
+                        solely for the
+                        purpose of generating accurate predictions and ensuring security. All data is securely stored
+                        and
+                        protected
+                        against unauthorized access.
+                    </div>
+
+                    <hr>
+
+                    <!-- Bail Information Section -->
+                    <div class="bail-info">
+                        <h3 class="title">Bail Information</h3>
+                        <div class="grid">
+                            <div class="card">
+                                <div class="card-title">Bail Amount</div>
+                                <div class="card-value">₹50,000</div>
+                            </div>
+                            <div class="card">
+                                <div class="card-title">Duration</div>
+                                <div class="card-value">30 days</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bail Score Section -->
+                    <div class="bail-score">
+                        <h3 class="title">Bail Score</h3>
+                        <div class="score">75%</div>
+                        <p>Estimated chance of getting bail</p>
+                    </div>
+
+                    <!-- IPC Breakdown Section -->
+                    <div class="ipc-breakdown">
+                        <h4>IPC Breakdown</h4>
+                        <textarea id="ipcDescription"
+                            placeholder="The breakdown of the IPC section will be displayed here..."></textarea>
+                    </div>
+
+                    <!-- Document Requirement Section -->
+                    <div class="document-box">
+                        <h4>Documents Required for Bail</h4>
+                        <ul>
+                            <li>Surety Bonds</li>
+                            <li>Aadhar Card</li>
+                            <li>FIR ID</li>
+                            <li>Bail Document</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+</body>
+</div>
+</div>
+</form>
+<!-- Footer Section -->
+<div class="footer">
+    &copy; 2024 Bail Reckoner. All rights reserved. | <a href="#" style="color: #fff; text-decoration: none;">Privacy
+        Policy</a> | <a href="#" style="color: #fff; text-decoration: none;">Terms of Service</a>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
