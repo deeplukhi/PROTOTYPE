@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page UI</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -33,11 +30,13 @@
             text-align: center;
         }
 
+        input[type="text"],
         input[type="email"],
-        input[type="password"] {
+        input[type="password"],
+        input[type="tel"] {
             width: 100%;
             padding: 10px;
-            margin: 10px 0;
+            margin: 10px 0px 1px;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
@@ -53,7 +52,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            margin-bottom: 1px;
+            margin-bottom: 10px;
             margin-top: 7px;
         }
 
@@ -65,16 +64,6 @@
             text-align: center;
             margin: 10px 0;
             color: #666;
-        }
-
-        .forget-password {
-            text-align: right;
-            margin-top: 7px;
-        }
-
-        .forget-password a {
-            color: darkblue;
-            text-decoration: none;
         }
 
         .social-login {
@@ -115,12 +104,14 @@
 
     <div class="login-container">
         <h1>Create an account</h1>
-        <input type="email" placeholder="Email address / moblie no.*" required>
+        <input type="text" placeholder="Enter your full name*"required>
+        <input type="email" placeholder="Email address*" required>
         <input type="password" placeholder="Enter password*" required>
+        <input type="tel" placeholder="Enter your moblie no.*" required>
         <button class="btn">Continue</button>
-        <div class="forget-password"><a href="#">Forget password !</a></div>
-        <div class="login-option">OR</div>
 
+        <div class="login-option"> Already have an account? <a href="#" class="login-link">Login</a></div>
+        <div class="login-option">OR</div>
 
         <div class="social-login">
             <div class="social-btn google-btn">
