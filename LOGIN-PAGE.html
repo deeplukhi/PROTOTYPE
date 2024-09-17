@@ -41,7 +41,16 @@
             box-sizing: border-box;
             font-size: 16px;
         }
-
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 1px 0;
+            margin-bottom: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
         .btn {
             width: 100%;
             padding: 10px;
@@ -60,7 +69,7 @@
 
         .login-option {
             text-align: center;
-            margin: 15px 0;
+            margin: 10px 0;
             color: #666;
         }
 
@@ -102,7 +111,7 @@
         }
 
         .login-link {
-            color: #36b37e;
+            color: darkblue;
             text-decoration: none;
             font-size: 14px;
             text-align: center;
@@ -115,7 +124,8 @@
 
     <div class="login-container">
         <h1>Create an account</h1>
-        <input type="email" placeholder="Email address*" required>
+        <input type="email" placeholder="Email address / moblie no.*" required>
+        <input type="password" placeholder="Enter password*" required>
         <button class="btn">Continue</button>
 
         <div class="login-option"> Already have an account? <a href="#" class="login-link">Login</a></div>
