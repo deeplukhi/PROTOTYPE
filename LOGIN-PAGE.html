@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            background-color: darkblue;
+        }
+
+        .login-option {
+            text-align: center;
+            margin: 15px 0;
+            color: #666;
+        }
+
+        .social-login {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            color: rgb(25, 24, 24);
+        }
+
+        .social-btn img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .google-btn {
+            background-color: #f4f4f4;
+        }
+
+        .microsoft-btn {
+            background-color: #f4f4f4;
+        }
+
+        .apple-btn {
+            background-color: #f8f4f4;
+            
+        }
+
+        .login-link {
+            color: #36b37e;
+            text-decoration: none;
+            font-size: 14px;
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>Create an account</h1>
+        <input type="email" placeholder="Email address*" required>
+        <button class="btn">Continue</button>
+
+        <div class="login-option"> Already have an account? <a href="#" class="login-link">Login</a></div>
+        <div class="login-option">OR</div>
+
+        <div class="social-login">
+            <div class="social-btn google-btn">
+                <img src="google.png" alt="google">
+                Continue with Google
+            </div>
+            <div class="social-btn apple-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/512px-Apple_logo_black.svg.png" alt="Apple"> 
+                Continue with Apple
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
