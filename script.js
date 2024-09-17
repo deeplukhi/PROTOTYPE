@@ -1,19 +1,8 @@
 // script.js
 
-// Function to get the selected value from a dropdown
 function getSelectedValue(dropdown) {
     return dropdown.value; // Gets the selected value
   }
-  
-  // Get all elements with the class 'myDropdown'
-  
-  // // Loop through all dropdown elements and add an event listener
-  // for (var i = 0; i < dropdowns.length; i++) {
-  //   dropdowns[i].addEventListener("change", function() {
-  //     var selectedValue = getSelectedValue(this); // 'this' refers to the current dropdown
-  //     console.log("Selected value:", selectedValue); // Output to the console
-  //   });
-  // }
   
   function updateIPCDescription() {
     // Get the selected value from the dropdown
@@ -25,14 +14,32 @@ function getSelectedValue(dropdown) {
     // Determine the IPC breakdown based on the selected value
     var breakdown;
     switch (crimeCode) {
-      case "302":
-        breakdown = "IPC Section 302: Murder - This section deals with punishment for murder.";
+      case "304":
+        breakdown = "IPC Section 304: Culpable Homicide Not Amounting to Murder - Punishment for culpable homicide not amounting to murder.";
         break;
-      case "376":
-        breakdown = "IPC Section 376: Rape - This section deals with punishment for rape.";
+      case "306":
+        breakdown = "IPC Section 306: Abetment of Suicide - Punishment for abetting suicide.";
+        break;
+      case "307":
+        breakdown = "IPC Section 307: Attempt to Murder - Punishment for attempting to commit murder.";
+        break;
+      case "323":
+        breakdown = "IPC Section 323: Punishment for Voluntarily Causing Hurt - Deals with causing hurt.";
+        break;
+      case "324":
+        breakdown = "IPC Section 324: Voluntarily Causing Hurt by Dangerous Weapons - Punishment for causing hurt with dangerous weapons.";
+        break;
+      case "325":
+        breakdown = "IPC Section 325: Punishment for Voluntarily Causing Grievous Hurt.";
         break;
       case "420":
-        breakdown = "IPC Section 420: Cheating - This section deals with punishment for cheating.";
+        breakdown = "IPC Section 420: Cheating - Deals with punishment for cheating.";
+        break;
+      case "376":
+        breakdown = "IPC Section 376: Rape - Punishment for rape.";
+        break;
+      case "506":
+        breakdown = "IPC Section 506: Criminal Intimidation - Punishment for criminal intimidation.";
         break;
       default:
         breakdown = "Please select an IPC section to see the breakdown.";
@@ -103,7 +110,6 @@ function getSelectedValue(dropdown) {
     }
   
     // Add more button event listener
-    document.querySelector(".form-group").innerHTML = '<button id="addMore" type="button">Add More</button>';
     document.getElementById("addMore").addEventListener("click", addMoreCrimeRows);
   
     // Check Bail button click event

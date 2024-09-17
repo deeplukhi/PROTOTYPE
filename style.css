@@ -8,7 +8,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
 /* Main Container for horizontal layout */
 .main-container {
     display: flex;
@@ -243,7 +242,7 @@ hr {
 .disclaimer-final {
     font-size: 14px;
     color: #666;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     line-height: 1.6;
 }
 
@@ -251,7 +250,7 @@ hr {
 .crime-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .crime-table th,
@@ -270,11 +269,27 @@ hr {
     margin-right: 15px;
 }
 
+/* Add More button */
+/* Updated button ID from #add-more-btn to #addMore */
+button#addMore {
+    display: inline-block;
+    padding: 7px 7px; 
+    margin-left: 560px;
+    font-size: 15px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 /* new old add button */
 .select,
 .button {
     width: 100%;
     padding: 8px 12px;
+    margin-top: 7px;
     font-size: 1rem;
     border-radius: 6px;
     border: 1px solid #d1d5db;
